@@ -7,6 +7,24 @@
     android:orientation="vertical"
     tools:context=".main2.Main2Activity">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="#ffffff"
+            />
+
+    </LinearLayout>
+
     <EditText
         android:id="@+id/et_name"
         android:layout_width="match_parent"

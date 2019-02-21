@@ -7,13 +7,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import com.yj.mvp_lib.Imvp.IBaseMvpActivity;
 import com.yj.mvp_lib.Imvp.IBasePresenter;
+import com.yj.mvp_lib.utils.StatusTopUtils;
 import com.yj.test.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,6 +32,8 @@ public class Main2Activity extends IBaseMvpActivity<PicContract.PicPresenter> im
     Button btn;
     @BindView(R.id.recyclerview)
     RecyclerView recyclerview;
+    @BindView(R.id.view)
+    LinearLayout view;
 
     private ArrayList<PicBean.DataBean> mlist = new ArrayList<>();
     RecyAdapter adapter;
@@ -40,6 +43,9 @@ public class Main2Activity extends IBaseMvpActivity<PicContract.PicPresenter> im
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         ButterKnife.bind(this);
+
+        int top = StatusTopUtils.getStatusTopSize(this);
+        view.setPadding(0, top, 0, 0);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

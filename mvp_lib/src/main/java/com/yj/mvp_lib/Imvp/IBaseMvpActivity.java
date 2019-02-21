@@ -3,15 +3,16 @@ package com.yj.mvp_lib.Imvp;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.yj.mvp_lib.base.IBaseActivity;
 
 /**
  * base 类 、继承
  * @param <P>
  */
-public abstract class IBaseMvpActivity<P extends IBasePresenter> extends AppCompatActivity implements IBaseView {
+public abstract class IBaseMvpActivity<P extends IBasePresenter> extends IBaseActivity implements IBaseView {
 
     protected P mpresenter;
     protected ProgressDialog progressDialog;
